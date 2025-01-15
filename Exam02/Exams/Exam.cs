@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Exam02.Exam
+namespace Exam02.Exams
 {
     internal abstract class Exam
     {

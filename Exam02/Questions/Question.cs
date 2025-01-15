@@ -14,8 +14,8 @@ namespace Exam02.Questions
         public required string Body { get; set; }
         public int Mark {  get; set; }
         public List<Answer>Answers { get; set; }
-        public Answer CorrectAnswer { get; set; }
-        protected Question(string header, string body, int mark, List<Answer> answers, Answer correctAnswer)
+        public int  CorrectAnswer { get; set; }
+        protected Question(string header, string body, int mark, List<Answer> answers, int correctAnswer)
         {
             Header = header;
             Body = body;
@@ -24,7 +24,9 @@ namespace Exam02.Questions
             CorrectAnswer = correctAnswer;
         }
 
-
-
+        public bool AnswerIsCorrect(int Id)
+        {
+            return Id == CorrectAnswer;
+        }
     }
 }

@@ -5,11 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Exam02.Exam
+namespace Exam02.Exams
 {
-    internal class FinalExam:Exam
+    internal class PracticalExam : Exam
     {
-        public FinalExam(DateTime time, int numberofQuestion, List<Question> q) : base(time, numberofQuestion, q)
+        public PracticalExam(DateTime time ,int numberofQuestion, List<Question> q) : base(time, numberofQuestion, q)
         {
 
         }
