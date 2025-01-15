@@ -1,4 +1,4 @@
-﻿using Exam02.Question;
+﻿using Exam02.Questions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,9 +7,15 @@ using System.Threading.Tasks;
 
 namespace Exam02.Exam
 {
-    internal class PracticalExam
+    internal class PracticalExam : Exam
     {
-        public List<MCQ> Mcq_Questions { get; set; }
+        public PracticalExam(DateTime time ,int numberofQuestion, List<Question> q) : base(time, numberofQuestion, q)
+        {
 
+        }
+        public override void showExam()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

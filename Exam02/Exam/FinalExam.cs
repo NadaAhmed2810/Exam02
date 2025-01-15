@@ -1,4 +1,4 @@
-﻿using Exam02.Question;
+﻿using Exam02.Questions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,10 +7,15 @@ using System.Threading.Tasks;
 
 namespace Exam02.Exam
 {
-    internal class FinalExam
+    internal class FinalExam:Exam
     {
-        public List<MCQ> Mcq_Questions {  get; set; }
-        public List<TrueOrFalse> trueOrFalses_Questions { get;set; }
-        
+        public FinalExam(DateTime time, int numberofQuestion, List<Question> q) : base(time, numberofQuestion, q)
+        {
+
+        }
+        public override void showExam()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Exam02.Question
+namespace Exam02.Questions
 {
     internal class MCQ
     {
