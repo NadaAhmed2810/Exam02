@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Exam02.Answers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,15 +9,21 @@ namespace Exam02.Question
 {
     internal abstract class Question
     {
+      
         public required string Header { get; set; }
         public required string Body { get; set; }
         public int Mark {  get; set; }
-        public Question(string Header ,string Body ,int Mark)
+        public List<Answer>Answers { get; set; }
+        public Answer CorrectAnswer { get; set; }
+        protected Question(string header, string body, int mark, List<Answer> answers, Answer correctAnswer)
         {
-            this.Header = Header;
-            this.Body = Body;
-            this.Mark = Mark;
+            Header = header;
+            Body = body;
+            Mark = mark;
+            Answers = answers?? new List<Answer>();
+            CorrectAnswer = correctAnswer;
         }
+
 
 
     }
