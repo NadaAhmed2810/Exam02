@@ -1,0 +1,16 @@
+﻿using Exam02.Question;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Exam02.Exam
+{
+    internal class FinalExam
+    {
+        public List<MCQ> Mcq_Questions {  get; set; }
+        public List<TrueOrFalse> trueOrFalses_Questions { get;set; }
+        
+    }
+}
