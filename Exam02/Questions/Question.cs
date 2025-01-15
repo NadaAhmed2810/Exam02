@@ -23,7 +23,7 @@ namespace Exam02.Questions
             Answers = answers?? new List<Answer>();
             CorrectAnswer = correctAnswer;
         }
-
+        public abstract void DisplayQuestion();
         public bool AnswerIsCorrect(int Id)
         {
             return Id == CorrectAnswer;
