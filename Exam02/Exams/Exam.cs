@@ -28,7 +28,32 @@ namespace Exam02.Exams
         }
         #region Methods
 
-        public abstract void showExam();
+        public virtual void showExam()
+        {
+            Result = 0;
+
+            foreach (var question in Questions)
+            {
+                bool f = false;
+                int answer;
+                do
+                {
+                    question.DisplayQuestion();
+                    Console.Write("Your Answer: ");
+
+                    f = int.TryParse(Console.ReadLine(), out answer);
+
+                } while (!f);
+                UserAnswers.Add(question, answer);
+                if (question.AnswerIsCorrect(answer))
+                {
+                    this.Result += question.Mark;
+                }
+                Console.WriteLine();
+                Console.Clear();
+
+            }
+        }
 
 
         public abstract void ResultOfExam();

@@ -46,7 +46,11 @@ namespace Exam02.Subjects
 
                 } while (!f || (typeofQuestion != 1 && typeofQuestion != 2));
             }
-            else typeofQuestion = 2;
+            else
+            {
+                Console.WriteLine("MCQ Question:");
+                typeofQuestion = 2;
+            }
             #endregion
             string header, body,answertext;
             do
