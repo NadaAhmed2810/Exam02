@@ -30,7 +30,7 @@ namespace Exam02.Exams
                     f = int.TryParse(Console.ReadLine(), out answer);
 
                 } while (!f);
-
+                UserAnswers.Add(question, answer);
                 if (question.AnswerIsCorrect(answer))
                 {
                     Result += question.Mark;
@@ -40,6 +40,15 @@ namespace Exam02.Exams
         }
         public override void ResultOfExam()
         {
+            int i = 0;
+            foreach (var answer in UserAnswers)
+            {
+                Question question = answer.Key;
+               
+                string correctAnswerText = question.GetAnswer(question.CorrectAnswer);
+                Console.WriteLine($"Correct Answer for Q{++i}: {correctAnswerText}");
+                Console.WriteLine($"Mark:{question.Mark}");
+            }
             Console.WriteLine($"\nExam Results:{Result} from {TotalMark}");
           
         }
