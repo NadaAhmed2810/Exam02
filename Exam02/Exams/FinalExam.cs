@@ -59,6 +59,7 @@ namespace Exam02.Exams
                 Console.WriteLine($"\nQuestion: {question.Body}");
                 Console.WriteLine($"Your Answer: {userAnswerText}");
                 Console.WriteLine($"Correct Answer: {correctAnswerText}");
+                Console.WriteLine($"Mark:{question.Mark}");
             }
             Console.WriteLine($"Your Mark:{Result} from {TotalMark}");
         }
