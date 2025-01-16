@@ -9,14 +9,19 @@ namespace Exam02.Questions
 {
     internal class TrueOrFalse : Question
     {
-        public TrueOrFalse(string header, string body, int mark, List<Answer> answers, int correctAnswer) : base(header, body, mark, answers, correctAnswer)
+        public TrueOrFalse(string header, string body, int mark, int correctAnswer) : base(header, body, mark, correctAnswer)
         {
-            header = "True Or False Question";
+            Answers = new List<Answer>
+            {
+                new Answer(1, "True"),
+                new Answer(2, "False")
+            };
+
         }
 
         public override void DisplayQuestion()
         {
-            Console.WriteLine($"{Header} {Body}\n1. True\n2. False");
+            Console.WriteLine($"{Body}\n1.true\n2.False");
         }
     }
 }

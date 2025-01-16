@@ -9,9 +9,11 @@ namespace Exam02.Questions
 {
     internal class MCQ : Question
     {
-        public MCQ(string header, string body, int mark, List<Answer> answers, int correctAnswer) : base(header, body, mark, answers, correctAnswer)
+        
+        public MCQ(string header, string body, int mark, List<Answer> answers, int correctAnswer) : base(header, body, mark,answers,correctAnswer)
         {
-            header = "MCQ Question\n";
+            
+            
         }
 
         public override void DisplayQuestion()
@@ -22,5 +24,8 @@ namespace Exam02.Questions
                 Console.WriteLine($"{i + 1}. {Answers[i].AnswerText}");
             }
         }
+       
+
+       
     }
 }
