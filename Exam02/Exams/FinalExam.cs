@@ -17,35 +17,6 @@ namespace Exam02.Exams
 
         }
 
-
-        public override void showExam()
-        {
-            Console.WriteLine("Final Exam\n");
-            Result = 0;
-
-            foreach (var question in Questions)
-            {
-                bool f = false;
-                int answer;
-                do
-                {
-                    question.DisplayQuestion();
-                    Console.Write("Your Answer: ");
-
-                    f = int.TryParse(Console.ReadLine(), out answer);
-
-                } while (!f);
-                UserAnswers.Add(question,answer);
-                if (question.AnswerIsCorrect(answer))
-                {
-                    this.Result += question.Mark;
-                }
-                Console.WriteLine();
-                Console.Clear();
-
-            }
-           
-        }
         public override void ResultOfExam()
         {
             Console.WriteLine("\nExam Results:");
